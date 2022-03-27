@@ -1,0 +1,305 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.20/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.20/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.20/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.20/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.20/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="88de57ddb2c591144c8426be0e5ae78bd9bf84c9ac772d1f7c98694f379d254c.html">Realizar Autenticaci&oacute;n En El Sitio Web</a></span>
+                > <span class="truncate-60"><a
+                    href="8f42fba1345c46d053b5ca62570f6c680ada414050aa5c36b7567ddf7706b309.html">Login a la plataforma con datos v&aacute;lidos </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 27-03-2022 16:33</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Realizar Autenticación En El Sitio Web </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                Yo como usuario de Your Logo<br />
+Quiero autenticarme en el sitio web<br />
+Para comprar productos
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Login a la plataforma con datos v&aacute;lidos
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="04ef5ee0db625e99db674f78440a74ebc68270da80fe3173e3f2c6399010261c.png" title=" Dado que me encuentro registrada en el sitio web" width="1920"/>
+                <img src="04ef5ee0db625e99db674f78440a74ebc68270da80fe3173e3f2c6399010261c.png" title=" Adriana rojas abrir pagina web" width="1920"/>
+                <img src="04ef5ee0db625e99db674f78440a74ebc68270da80fe3173e3f2c6399010261c.png" title=" Adriana Rojas opens the Inicio pagina web" width="1920"/>
+                <img src="1ccf72e1223e585e904e6d297395d80fee1b60931af41d06e791d534e2b65ddb.png" title=" Adriana Rojas opens the Inicio pagina web (completed)" width="1920"/>
+                <img src="1ccf72e1223e585e904e6d297395d80fee1b60931af41d06e791d534e2b65ddb.png" title=" Adriana rojas abrir pagina web (completed)" width="1920"/>
+                <img src="1ccf72e1223e585e904e6d297395d80fee1b60931af41d06e791d534e2b65ddb.png" title=" Adriana rojas sign in" width="1920"/>
+                <img src="a507059bf41ed1d2e73bd9fb7000356bad94b8c2c8da7419a2d6bf7ab0eafd4b.png" title=" Adriana Rojas clicks on sign in" width="1920"/>
+                <img src="7fd249791f8e04bf70df108d84bc610140f132335e466f106c9a702e9e5855a9.png" title=" Adriana Rojas clicks on sign in (completed)" width="1920"/>
+                <img src="7fd249791f8e04bf70df108d84bc610140f132335e466f106c9a702e9e5855a9.png" title=" Adriana rojas sign in (completed)" width="1920"/>
+                <img src="7fd249791f8e04bf70df108d84bc610140f132335e466f106c9a702e9e5855a9.png" title=" Adriana rojas validar email create account" width="1920"/>
+                <img src="c5d2277b41aa7f3d56e97a27751a778827cbea9c5083a32c231e1027f8f3a92a.png" title=" Adriana Rojas enters '6864adri.rojas@99gmail.com' into Email create" width="1920"/>
+                <img src="d5cc1e5996a36d488d2ff07d2b2c7dc9d354da9494476e0b44b25be82dc2ff12.png" title=" Adriana Rojas enters '6864adri.rojas@99gmail.com' into Email create (completed)" width="1920"/>
+                <img src="ffd782c91d1c8e042206c6733109360368c870528c4414d719c23d959430cafa.png" title=" Adriana Rojas clicks on Submit create" width="1920"/>
+                <img src="2c14af7c05730e336d84be85b4cec278a575d91fd365070dc192242a01e011fa.png" title=" Adriana Rojas clicks on Submit create (completed)" width="1920"/>
+                <img src="2c14af7c05730e336d84be85b4cec278a575d91fd365070dc192242a01e011fa.png" title=" Adriana rojas validar email create account (completed)" width="1920"/>
+                <img src="2c14af7c05730e336d84be85b4cec278a575d91fd365070dc192242a01e011fa.png" title=" Adriana rojas llenar create account" width="1920"/>
+                <img src="1849c4299a4fc0a82ce127acddb6eef643f24c01ada180d4a8b6aaf26423dddd.png" title=" Adriana Rojas clicks on Mrs" width="1920"/>
+                <img src="ee980f7e0d0eabb2c44ac7a06dadfb9614258bd7872a076eb657c42105e1c169.png" title=" Adriana Rojas clicks on Mrs (completed)" width="1920"/>
+                <img src="e58178967e66091617300e01bd5ba16fc9aa8307124b9ba59a3673df620ebaaa.png" title=" Adriana Rojas enters 'Angelina' into Customer firstname" width="1920"/>
+                <img src="db9ba9ddb2fcd0dd7deca9f4e03dda8acc4ff1d3b56c9ac355a975c8d67ee484.png" title=" Adriana Rojas enters 'Angelina' into Customer firstname (completed)" width="1920"/>
+                <img src="37cbad55620c84d5e8c92b14b53aadb51b8edd6387b0f789d43565337c7f63c3.png" title=" Adriana Rojas enters 'Jolie' into Customer lastname" width="1920"/>
+                <img src="e809184bfc3aa56cb146db1de151da065b13712835550c102e3740b65068116f.png" title=" Adriana Rojas enters 'Jolie' into Customer lastname (completed)" width="1920"/>
+                <img src="8c85b5e5b51caca9de9950cc338b02e43ad8b79f5629251a30109fcd0a68419a.png" title=" Adriana Rojas enters '123456*' into Passwd" width="1920"/>
+                <img src="71c1b0cb5ba291b6b81497db60ed269a24a6a2f92a6f4a030b55cc868f10358e.png" title=" Adriana Rojas enters '123456*' into Passwd (completed)" width="1920"/>
+                <img src="6dc7cd77ade60c42ef9251cdca84e09086481015fd2f4a5f84ddc2e570827d5f.png" title=" Adriana Rojas selects 4 in days" width="1920"/>
+                <img src="8424ea6d2d3ac44d824930064194d29916a6aa25b7b1fdbc515505acb5475df0.png" title=" Adriana Rojas selects 4 in days (completed)" width="1920"/>
+                <img src="8424ea6d2d3ac44d824930064194d29916a6aa25b7b1fdbc515505acb5475df0.png" title=" Adriana Rojas select January  on Months" width="1920"/>
+                <img src="ac98a52d550aa7832dc0db8150a5eac58bbb864e8b1a74e8912d714e0910433c.png" title=" Adriana Rojas select January  on Months (completed)" width="1920"/>
+                <img src="ac98a52d550aa7832dc0db8150a5eac58bbb864e8b1a74e8912d714e0910433c.png" title=" Adriana Rojas selects 2022 in years" width="1920"/>
+                <img src="f102e998aeeee3b8ac474759ca44e5035a5fccd7e009d4cac03e65cfe5cbf90a.png" title=" Adriana Rojas selects 2022 in years (completed)" width="1920"/>
+                <img src="32f6593eacb9d18410f8a4545f50c14d95d09b8c17c4ce5da88aa33d927f67cd.png" title=" Adriana Rojas clicks on Offers" width="1920"/>
+                <img src="acf4b4c32d93737f0b37ef736ab3351a951d7adc991b75c871d0d91470d9dfd2.png" title=" Adriana Rojas clicks on Offers (completed)" width="1920"/>
+                <img src="0e154d30de60d72bcc77bc6a5d9a4f237baf98579f4d19a4aef7def50f43e89a.png" title=" Adriana Rojas enters 'Sofka' into Company" width="1920"/>
+                <img src="a81507d8920b5684788237e7274e0f6152ff0e799668ff694e18a6bd941d6289.png" title=" Adriana Rojas enters 'Sofka' into Company (completed)" width="1920"/>
+                <img src="c1aaa0f6afc1420e464e82b34b43fd6b7252d70cbed9fc24e482488dc239ec05.png" title=" Adriana Rojas enters 'Street 52' into Address uno" width="1920"/>
+                <img src="1d212423d7a2e77d703d5927afeb138a82533ddacb4d14c962877a42e9a31d74.png" title=" Adriana Rojas enters 'Street 52' into Address uno (completed)" width="1920"/>
+                <img src="68e2dd2636062cf2815d4d7dcf610c35626ac42b09150ef5b9a069a3855923af.png" title=" Adriana Rojas enters 'Apartment 101' into AddresS dos" width="1920"/>
+                <img src="24d6f7a4b9019116a6459bdfd5c3babc893fc71d1d1eb1f7c69d614b7e15c87f.png" title=" Adriana Rojas enters 'Apartment 101' into AddresS dos (completed)" width="1920"/>
+                <img src="3a8e81eabb40e3d7c406a3b71d9bf4072a9e1626cc870224a5920fdd76caca65.png" title=" Adriana Rojas enters 'Hukicha' into City" width="1920"/>
+                <img src="7fdeb0ad9c909430541fe2598e696fded512de37923472d72fdefdc5e20ec259.png" title=" Adriana Rojas enters 'Hukicha' into City (completed)" width="1920"/>
+                <img src="d1cb1cd235fc013339d0d4781a23e3d08b74dfa0e9440056a503e9bc96f28fae.png" title=" Adriana Rojas select Alabama on Id state" width="1920"/>
+                <img src="b712d0a0c90b9b20179847258aca46acec44e45d51f34b7882cc4e5a03392893.png" title=" Adriana Rojas select Alabama on Id state (completed)" width="1920"/>
+                <img src="4697b88b0a3716929c383c75b3b03c9ae21f50946a06b06c9039b74e6e001224.png" title=" Adriana Rojas enters '12345' into Post code" width="1920"/>
+                <img src="6577e3ff94fc3db16998a8cdfa71d11bc724b4def8197421e1eef680d896e322.png" title=" Adriana Rojas enters '12345' into Post code (completed)" width="1920"/>
+                <img src="e60f471f51a76245718d326698acea7943f73b69d15b0d87a861727334224480.png" title=" Adriana Rojas select United States on Country" width="1920"/>
+                <img src="e60f471f51a76245718d326698acea7943f73b69d15b0d87a861727334224480.png" title=" Adriana Rojas select United States on Country (completed)" width="1920"/>
+                <img src="b271ea6025ee7dab310524b6a3c46bf9564d1563505aba38b16f80da82805545.png" title=" Adriana Rojas enters 'Esta es una prueba automatizada' into Add information" width="1920"/>
+                <img src="7d7c6395b219c9125c040eea4dedd8b409f20faac6afa80f47d310fec9db5f60.png" title=" Adriana Rojas enters 'Esta es una prueba automatizada' into Add information (completed)" width="1920"/>
+                <img src="555a9f416e06eaabf826d373a523aef3819e64af36a95d82621e4c62f0c70532.png" title=" Adriana Rojas enters '30222427' into Phone" width="1920"/>
+                <img src="6f2aa4a0d98e904633ff8e1d02b620df22c60b7d611db085ee2f028e6f82dafa.png" title=" Adriana Rojas enters '30222427' into Phone (completed)" width="1920"/>
+                <img src="5d262c2e96952ea2e4c88518671e4c21b4fea1fa5a4133306c2ca62c02af3443.png" title=" Adriana Rojas enters '3022542578' into Phone_mobile" width="1920"/>
+                <img src="010af7ebe60d78fbd492a733d4072f25b09c367cce7cceb3152e7a6aacc99502.png" title=" Adriana Rojas enters '3022542578' into Phone_mobile (completed)" width="1920"/>
+                <img src="a3602a3b0a7819571fe2dbf86635e2a6f3b873bdab0e976e38b868019decd33c.png" title=" Adriana Rojas enters 'Parque central de los novios' into Alias" width="1920"/>
+                <img src="6de0b9e73d0195417f3abdc4190212e25c7f83aa48ab9f630bf0754692b45a2b.png" title=" Adriana Rojas enters 'Parque central de los novios' into Alias (completed)" width="1920"/>
+                <img src="ee664a2742fbb6ab8861c12bfb4361200ebf7855eb1f2a5ac76ad3bedda90dda.png" title=" Adriana Rojas clicks on Register" width="1920"/>
+                <img src="97401ce7fd104d94a51b4f1d788a7c70e2127f7e5faa81cf423a7db61d2b959c.png" title=" Adriana Rojas clicks on Register (completed)" width="1920"/>
+                <img src="97401ce7fd104d94a51b4f1d788a7c70e2127f7e5faa81cf423a7db61d2b959c.png" title=" Adriana rojas llenar create account (completed)" width="1920"/>
+                <img src="97401ce7fd104d94a51b4f1d788a7c70e2127f7e5faa81cf423a7db61d2b959c.png" title=" Adriana rojas logout" width="1920"/>
+                <img src="c91d66edc57e2b7e06d9d25f5eb384764d3fa38f9b724021d0e0d8233fe53808.png" title=" Adriana Rojas clicks on Logout" width="1920"/>
+                <img src="7fd249791f8e04bf70df108d84bc610140f132335e466f106c9a702e9e5855a9.png" title=" Adriana Rojas clicks on Logout (completed)" width="1920"/>
+                <img src="7fd249791f8e04bf70df108d84bc610140f132335e466f106c9a702e9e5855a9.png" title=" Adriana rojas logout (completed)" width="1920"/>
+                <img src="7fd249791f8e04bf70df108d84bc610140f132335e466f106c9a702e9e5855a9.png" title=" Dado que me encuentro registrada en el sitio web (completed)" width="1920"/>
+                <img src="e3ab1dfca75fec6e552e8d281545f934a4d48337c41957d997c9d17d019694fd.png" title=" Cuando me autentico con Email address y password" width="1920"/>
+                <img src="e3ab1dfca75fec6e552e8d281545f934a4d48337c41957d997c9d17d019694fd.png" title=" Adriana rojas sign in" width="1920"/>
+                <img src="e3ab1dfca75fec6e552e8d281545f934a4d48337c41957d997c9d17d019694fd.png" title=" Adriana Rojas clicks on sign in" width="1920"/>
+                <img src="7fd249791f8e04bf70df108d84bc610140f132335e466f106c9a702e9e5855a9.png" title=" Adriana Rojas clicks on sign in (completed)" width="1920"/>
+                <img src="7fd249791f8e04bf70df108d84bc610140f132335e466f106c9a702e9e5855a9.png" title=" Adriana rojas sign in (completed)" width="1920"/>
+                <img src="da117b5a22bda74bcae2b2f9b335ee55cc8b3f9517381387a043c1958835fc22.png" title=" Adriana rojas ingresar sign in" width="1920"/>
+                <img src="da117b5a22bda74bcae2b2f9b335ee55cc8b3f9517381387a043c1958835fc22.png" title=" Adriana Rojas enters '6864adri.rojas@99gmail.com' into Email login" width="1920"/>
+                <img src="3b18c1c9ccfb465d24b4b0786b46c3fe04411babe32e6f9cb7ae5e9289f6f6ec.png" title=" Adriana Rojas enters '6864adri.rojas@99gmail.com' into Email login (completed)" width="1920"/>
+                <img src="9e6afbd00e67f35430111e9e154d2c3fad6c484a55cb192f8f363c42a804603d.png" title=" Adriana Rojas enters '123456*' into Password login" width="1920"/>
+                <img src="a9ab2070906cebc417ac609b3cd7feaceeb093bac9f20d32e47b687460f31f23.png" title=" Adriana Rojas enters '123456*' into Password login (completed)" width="1920"/>
+                <img src="c955f3c75f9a40381ab6a6be6224cf859f00ba0310b84e6681e47ab78d270291.png" title=" Adriana Rojas clicks on Login in" width="1920"/>
+                <img src="97401ce7fd104d94a51b4f1d788a7c70e2127f7e5faa81cf423a7db61d2b959c.png" title=" Adriana Rojas clicks on Login in (completed)" width="1920"/>
+                <img src="97401ce7fd104d94a51b4f1d788a7c70e2127f7e5faa81cf423a7db61d2b959c.png" title=" Adriana rojas ingresar sign in (completed)" width="1920"/>
+                <img src="97401ce7fd104d94a51b4f1d788a7c70e2127f7e5faa81cf423a7db61d2b959c.png" title=" Cuando me autentico con Email address y password (completed)" width="1920"/>
+                <img src="97401ce7fd104d94a51b4f1d788a7c70e2127f7e5faa81cf423a7db61d2b959c.png" title=" Entonces puedo acceder a mi cuenta" width="1920"/>
+                <img src="97401ce7fd104d94a51b4f1d788a7c70e2127f7e5faa81cf423a7db61d2b959c.png" title=" Then verificacion mensaje should be (true)" width="1920"/>
+                <img src="97401ce7fd104d94a51b4f1d788a7c70e2127f7e5faa81cf423a7db61d2b959c.png" title=" Entonces puedo acceder a mi cuenta (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.2.9</span>
+</div>
+</body>
+</html>

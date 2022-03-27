@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="0" failures="0" name="Crear una cuenta en el sitio web" skipped="0" tests="2" time="90.65" timestamp="2022-03-27 04:27:40"><testcase name="Registro exitoso en el sitio web"/><testcase name="Registro a la plataforma con correo ya registrado"/></testsuite>
